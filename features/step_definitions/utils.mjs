@@ -164,3 +164,4 @@ async function verify_the_downloaded_file_exists(fileName) {
 }
 
 Then("Verify the file {string} exists", { timeout: 60000 }, verify_the_downloaded_file_exists);
+When("Noop", async function(){})
