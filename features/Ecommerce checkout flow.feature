@@ -7,6 +7,7 @@ Feature: Ecommerce checkout flow
     When The user context clicks on Add to cart button in the context of "<keyboard_product_name>" and context clicks on Add to cart button in the context of "<bottle_product_name>" and navigates to the cart page
 	# click on Checkout, fill First name with <first_name>, fill Last name with <last_name>, fill Zip/Postal code with <zip_code>, click on Checkout, click on Back home
     When The user completes the checkout process by entering first name "<first_name>", last name "<last_name>", and zip code "<zip_code>" and navigates back to the products page
+    When logout
 
     Examples:
       | admin_username | admin_password | login_username | keyboard_product_name           | bottle_product_name              | first_name | last_name | zip_code |
