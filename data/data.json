@@ -6,11 +6,6 @@
       "DataType": "secret"
     },
     {
-      "key": "password",
-      "value": "U2FsdGVkX191xa9xafxoao688SBGyNqa5k2jTbIyMMc=",
-      "DataType": "secret"
-    },
-    {
       "key": "AES_KEY",
       "value": "56",
       "DataType": "string"
