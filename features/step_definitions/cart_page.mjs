@@ -67,11 +67,10 @@ After(async function () {
  * @param {string} _firstname  firstname
  * @param {string} _zip  zip
  * @ai
- * @path=/cart
  */
 async function checkout_with_first_name_first_name_last_name_firstname_zip_zip_1(_first_name, _firstname, _zip) {
   // source: ai
-  // implemented_at: 2025-05-07T10:22:23.865Z
+  // implemented_at: 2025-05-08T05:26:08.149Z
   const _params = { _first_name, _firstname, _zip };
   // Click on CHECKOUT button
   await context.web.click(elements["button_checko_firstname_t"], _params, null, this);
@@ -95,11 +94,10 @@ When(
  * verify "Thank you for your order" can be found in the page
  * @param {string} _thank_you_message  thank you message
  * @ai
- * @path=/cart
  */
 async function verify_text_found_can_be_found_in_the_page(_thank_you_message) {
   // source: ai
-  // implemented_at: 2025-05-07T10:22:45.952Z
+  // implemented_at: 2025-05-08T05:26:08.215Z
   const _params = { _thank_you_message };
   // Verify page contains text "_thank_you_message"
   await context.web.verifyTextExistInPage(_thank_you_message, null, this);

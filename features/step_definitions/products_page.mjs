@@ -43,11 +43,10 @@ After(async function () {
  * add to basket "<item>" 1
  * @param {string} _item  item
  * @ai
- * @path=/products
  */
 async function add_to_basket_item_1(_item) {
   // source: ai
-  // implemented_at: 2025-05-07T10:20:42.485Z
+  // implemented_at: 2025-05-08T05:26:08.053Z
   const _params = { _item };
   // Click on Add to cart (Urban Backpack - Compact & Durable)
   await context.web.click(elements["button_add_to_cart"], _params, null, this);
@@ -58,11 +57,10 @@ Given("add to basket {string} 1", { timeout: 120000 }, add_to_basket_item_1);
 /**
  * open basket 5
  * @ai
- * @path=/products
  */
 async function open_basket_5() {
   // source: ai
-  // implemented_at: 2025-05-07T10:21:11.830Z
+  // implemented_at: 2025-05-08T05:26:08.099Z
   const _params = {};
   // Click on Go to cart
   await context.web.click(elements["button_go_to_cart"], _params, null, this);

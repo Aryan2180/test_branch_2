@@ -79,11 +79,10 @@ After(async function () {
  * @param {string} _username  username
  * @param {string} _password  password
  * @ai
- * @path=/login
  */
 async function login_with_username_and_password(_username, _password) {
   // source: ai
-  // implemented_at: 2025-05-07T10:20:08.831Z
+  // implemented_at: 2025-05-08T05:26:07.899Z
   const _params = { _username, _password };
   // Fill Username with "_username"
   await context.web.clickType(elements["textbox_username"], _username, false, _params, null, this);
