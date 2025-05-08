@@ -1,0 +1,106 @@
+{
+  "text_view_profile_user_avatar_top_right": {
+    "basic": [],
+    "no_text": [
+      {
+        "css": "div.pointer.pointer-advanced.active",
+        "priority": 3
+      },
+      {
+        "css": ".pointer.active"
+      },
+      {
+        "css": "div.pointer.pointer-advanced.active"
+      },
+      {
+        "css": ":root > :nth-child(2) > :nth-child(26) > :nth-child(2) > :nth-child(5) > :nth-child(1) > :nth-child(1)"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "no_text"
+  },
+  "button_view_profile": {
+    "basic": [
+      {
+        "score": 142,
+        "css": "internal:role=button[name=\"View profile\"i]",
+        "priority": 1
+      },
+      {
+        "score": 147,
+        "css": "internal:role=button[name=\"View profile\"s]",
+        "priority": 1
+      },
+      {
+        "score": 355.5,
+        "css": "button >> internal:has-text=\"View profile\"i",
+        "priority": 1
+      },
+      {
+        "score": 390.5,
+        "css": "button >> internal:has-text=/^View profile$/",
+        "priority": 1
+      }
+    ],
+    "no_text": [
+      {
+        "css": ".branding-userProfile-button"
+      },
+      {
+        "css": "[data-aura-class='oneUserProfileCardTrigger'] [aria-haspopup]"
+      },
+      {
+        "css": "button.slds-button.branding-userProfile-button.slds-global-actions__avatar.slds-global-actions__item-action"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  },
+  "link_log_out": {
+    "basic": [
+      {
+        "score": 142,
+        "css": "internal:role=link[name=\"Log Out\"i]",
+        "priority": 1
+      },
+      {
+        "score": 147,
+        "css": "internal:role=link[name=\"Log Out\"s]",
+        "priority": 1
+      },
+      {
+        "score": 181,
+        "css": "internal:text=\"Log Out\"i",
+        "priority": 1
+      },
+      {
+        "score": 186,
+        "css": "internal:text=\"Log Out\"s",
+        "priority": 1
+      },
+      {
+        "score": 355.5,
+        "css": "a >> internal:has-text=\"Log Out\"i",
+        "priority": 1
+      },
+      {
+        "score": 390.5,
+        "css": "a >> internal:has-text=/^Log Out$/",
+        "priority": 1
+      }
+    ],
+    "no_text": [
+      {
+        "css": "[href='\\/secur\\/logout\\.jsp']"
+      },
+      {
+        "css": "a.profile-link-label.logout.uiOutputURL"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  }
+}

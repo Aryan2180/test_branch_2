@@ -1,0 +1,33 @@
+{
+  "login-salesforce": [
+    {
+      "key": "toooop",
+      "value": "U2FsdGVkX1+dJ40zQWdjxCFOeFd0C1Dz/TA8/5y0duouKaNQx9bzM/QmfRwv2IogxIXokYKFPL3vY8DTGIA2fA==",
+      "DataType": "totp"
+    },
+    {
+      "key": "username",
+      "value": "dev@blinq.io",
+      "DataType": "string"
+    }
+  ],
+  "shop-blinq": [
+    {
+      "key": "username",
+      "value": "blinq_user",
+      "DataType": "string"
+    }
+  ],
+  "*": [
+    {
+      "key": "password",
+      "value": "U2FsdGVkX1+A1kcV9w3H0pVW2kB/A+iIkhyXTykU+9A=",
+      "DataType": "secret"
+    },
+    {
+      "key": "AES_KEY",
+      "value": "56",
+      "DataType": "string"
+    }
+  ]
+}

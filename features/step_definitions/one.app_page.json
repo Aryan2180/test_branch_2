@@ -1,0 +1,190 @@
+{
+  "link_accounts": {
+    "basic": [
+      {
+        "score": 142,
+        "css": "internal:role=link[name=\"Accounts\"i]",
+        "priority": 1
+      },
+      {
+        "score": 147,
+        "css": "internal:role=link[name=\"Accounts\"s]",
+        "priority": 1
+      },
+      {
+        "score": 390.5,
+        "css": "a >> internal:has-text=/^Accounts$/",
+        "priority": 1
+      }
+    ],
+    "no_text": [
+      {
+        "score": 201,
+        "css": "internal:attr=[title=\"Accounts\"i]",
+        "priority": 1
+      },
+      {
+        "score": 206,
+        "css": "internal:attr=[title=\"Accounts\"s]",
+        "priority": 1
+      },
+      {
+        "css": "a.slds-context-bar__label-action.dndItem[title=\"Accounts\"]"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  },
+  "button_new": {
+    "basic": [
+      {
+        "score": 141,
+        "css": "internal:role=button[name=\"New\"i]",
+        "priority": 1
+      },
+      {
+        "score": 146,
+        "css": "internal:role=button[name=\"New\"s]",
+        "priority": 1
+      },
+      {
+        "score": 195,
+        "css": "internal:text=\"New\"s >> xpath=..",
+        "priority": 1
+      },
+      {
+        "score": 390,
+        "css": "a >> internal:has-text=/^New$/",
+        "priority": 1
+      }
+    ],
+    "no_text": [
+      {
+        "css": "[href][title='New']"
+      },
+      {
+        "css": "a.forceActionLink[title=\"New\"][role=\"button\"]"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  },
+  "textbox_account_name": {
+    "basic": [
+      {
+        "score": 121,
+        "css": "internal:label=\"*Account Name\"i",
+        "priority": 1
+      },
+      {
+        "score": 126,
+        "css": "internal:label=\"*Account Name\"s",
+        "priority": 1
+      },
+      {
+        "score": 143,
+        "css": "internal:role=textbox[name=\"*Account Name\"i]",
+        "priority": 1
+      },
+      {
+        "score": 148,
+        "css": "internal:role=textbox[name=\"*Account Name\"s]",
+        "priority": 1
+      }
+    ],
+    "no_text": [],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  },
+  "combobox_search_accounts_": {
+    "basic": [
+      {
+        "score": 121,
+        "css": "internal:label=\"Parent Account\"i",
+        "priority": 1
+      },
+      {
+        "score": 126,
+        "css": "internal:label=\"Parent Account\"s",
+        "priority": 1
+      }
+    ],
+    "no_text": [
+      {
+        "score": 103,
+        "css": "internal:attr=[placeholder=\"Search Accounts...\"i]",
+        "priority": 1
+      },
+      {
+        "score": 108,
+        "css": "internal:attr=[placeholder=\"Search Accounts...\"s]",
+        "priority": 1
+      },
+      {
+        "css": "input.slds-combobox__input.slds-input"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  },
+  "option_billing": {
+    "basic": [
+      {
+        "score": 142,
+        "css": "internal:role=option[name=\"Billing\"i]",
+        "priority": 1
+      },
+      {
+        "score": 147,
+        "css": "internal:role=option[name=\"Billing\"s]",
+        "priority": 1
+      },
+      {
+        "score": 355.5,
+        "css": "lightning-base-combobox-item >> internal:has-text=\"Billing\"i",
+        "priority": 1
+      },
+      {
+        "score": 390.5,
+        "css": "lightning-base-combobox-item >> internal:has-text=/^Billing$/",
+        "priority": 1
+      }
+    ],
+    "no_text": [
+      {
+        "css": ".slds-has-focus"
+      },
+      {
+        "css": "lightning-base-combobox-item.slds-media.slds-listbox__option.slds-media_center.slds-listbox__option_entity.slds-has-focus"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  },
+  "button_save": {
+    "basic": [
+      {
+        "score": 147,
+        "css": "internal:role=button[name=\"Save\"s]",
+        "priority": 1
+      },
+      {
+        "css": "button.slds-button.slds-button_brand[name=\"SaveEdit\"]",
+        "priority": 3
+      }
+    ],
+    "no_text": [
+      {
+        "css": "button.slds-button.slds-button_brand[name=\"SaveEdit\"]"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  }
+}

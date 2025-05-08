@@ -1,14 +1,14 @@
 {
-  "textbox_username_1": {
+  "textbox_username": {
     "basic": [
       {
         "score": 121,
-        "css": "internal:label=\"Username *\"i",
+        "css": "internal:label=\"Username\"i",
         "priority": 1
       },
       {
         "score": 126,
-        "css": "internal:label=\"Username *\"s",
+        "css": "internal:label=\"Username\"s",
         "priority": 1
       },
       {
@@ -31,16 +31,16 @@
     "context": [],
     "strategy": "basic"
   },
-  "textbox_password_1": {
+  "textbox_password": {
     "basic": [
       {
         "score": 121,
-        "css": "internal:label=\"Password *\"i",
+        "css": "internal:label=\"Password\"i",
         "priority": 1
       },
       {
         "score": 126,
-        "css": "internal:label=\"Password *\"s",
+        "css": "internal:label=\"Password\"s",
         "priority": 1
       },
       {
@@ -63,45 +63,37 @@
     "context": [],
     "strategy": "basic"
   },
-  "button_login_1": {
+  "button_log_in": {
     "basic": [
       {
         "score": 142,
-        "css": "internal:role=button[name=\"Login\"i]",
+        "css": "internal:role=button[name=\"Log In\"i]",
         "priority": 1
       },
       {
         "score": 147,
-        "css": "internal:role=button[name=\"Login\"s]",
-        "priority": 1
-      },
-      {
-        "score": 180,
-        "css": "internal:text=\"Login\"i",
+        "css": "internal:role=button[name=\"Log In\"s]",
         "priority": 1
       },
       {
         "score": 185,
-        "css": "internal:text=\"Login\"s",
+        "css": "internal:text=\"Log In\"s",
         "priority": 1
       },
       {
         "score": 355,
-        "css": "button >> internal:has-text=\"Login\"i",
+        "css": "input >> internal:has-text=\"Log In\"i",
         "priority": 1
       },
       {
-        "score": 390,
-        "css": "button >> internal:has-text=/^Login$/",
+        "score": 390.5,
+        "css": "input >> internal:has-text=/^Log In$/",
         "priority": 1
       }
     ],
     "no_text": [
       {
-        "css": "button"
-      },
-      {
-        "css": "[tabindex]"
+        "css": "#Login"
       }
     ],
     "ignore_digit": [],

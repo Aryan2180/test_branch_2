@@ -6,23 +6,25 @@ const path = null;
 
 const elements = {
   button_add_to_cart: {
-    locators: [{ text: "{keyboard_product_name}", css: "button", climb: 3 }],
-    element_name: "Add to cart button",
-  },
-  button_add_to_cart_1: {
-    locators: [{ text: "{bottle_product_name}", css: "button", climb: 3 }],
-    element_name: "Add to cart button",
+    locators: [
+      { css: "internal:text=/^{item}$/i", priority: 3 },
+      { text: "{item}", climb: 2, css: { locator: "button[aria-label='Add to cart']", index: 0 }, priority: 1 },
+    ],
+    element_name: "Add to cart (Urban Backpack - Compact & Durable)",
   },
   button_go_to_cart: {
     locators: [
-      { css: 'internal:label="Go to cart"i', priority: 1 },
-      { css: 'internal:label="Go to cart"s', priority: 1 },
-      { css: 'internal:role=button[name="Go to cart"i]', priority: 1 },
-      { css: 'internal:role=button[name="Go to cart"s]', priority: 1 },
-      { css: "div >> internal:has-text=/^2$/", priority: 1 },
-      { css: 'internal:text="2"s >> xpath=../..', priority: 1 },
+      { strategy: "ROLE_NAME", css: 'internal:role=button[name="Go to cart"i]' },
+      { strategy: "ROLE_NAME", css: 'internal:role=button[name="Go to cart"s]' },
+      { strategy: "ID", css: "#cart", priority: 1 },
+      { css: "[aria-label='Go to cart']", priority: 1 },
+      { strategy: "ROLE", css: "internal:role=button", priority: 3 },
     ],
-    element_name: "Go to cart button",
+    element_name: "Go to cart",
+  },
+  button_add_to_cart_1: {
+    locators: [{ text: "{product_name}", css: "button", climb: 3 }],
+    element_name: "Add to cart button",
   },
 };
 
@@ -38,29 +40,52 @@ After(async function () {
   context = null;
 });
 /**
- * The user context clicks on Add to cart button in the context of "<keyboard_product_name>" and context clicks on Add to cart button in the context of "<bottle_product_name>" and navigates to the cart page
- * @param {string} _keyboard_product_name  keyboard product name
- * @param {string} _bottle_product_name  bottle product name
- * @recorder
+ * add to basket "<item>" 1
+ * @param {string} _item  item
+ * @ai
  * @path=/products
  */
-async function the_user_context_clicks_on_add_to_cart_button_in_the_context_of_keyboard_product_name_and_context_clicks_on_add_to_cart_button_in_the_context_of_bottle_product_name_and_navigates_to_the_cart_page(
-  _keyboard_product_name,
-  _bottle_product_name
-) {
-  // source: recorder
-  // implemented_at: 2025-04-28T11:29:56.239Z
-  const _params = { _keyboard_product_name, _bottle_product_name };
-  //  Click on button_add_to_cart in the context of <keyboard_product_name>
-  await context.web.click(elements["button_add_to_cart"], _params, { context: _keyboard_product_name }, this);
-  //  Click on button_add_to_cart_1 in the context of <bottle_product_name>
-  await context.web.click(elements["button_add_to_cart_1"], _params, { context: _bottle_product_name }, this);
-  // Click on Go to cart button
+async function add_to_basket_item_1(_item) {
+  // source: ai
+  // implemented_at: 2025-05-07T10:20:42.485Z
+  const _params = { _item };
+  // Click on Add to cart (Urban Backpack - Compact & Durable)
+  await context.web.click(elements["button_add_to_cart"], _params, null, this);
+}
+
+Given("add to basket {string} 1", { timeout: 120000 }, add_to_basket_item_1);
+
+/**
+ * open basket 5
+ * @ai
+ * @path=/products
+ */
+async function open_basket_5() {
+  // source: ai
+  // implemented_at: 2025-05-07T10:21:11.830Z
+  const _params = {};
+  // Click on Go to cart
   await context.web.click(elements["button_go_to_cart"], _params, null, this);
 }
 
-When(
-  "The user context clicks on Add to cart button in the context of {string} and context clicks on Add to cart button in the context of {string} and navigates to the cart page",
-  { timeout: 180000 },
-  the_user_context_clicks_on_add_to_cart_button_in_the_context_of_keyboard_product_name_and_context_clicks_on_add_to_cart_button_in_the_context_of_bottle_product_name_and_navigates_to_the_cart_page
+When("open basket 5", { timeout: 120000 }, open_basket_5);
+
+/**
+ * The user context clicks on Add to cart button in the context of "<product_name>"
+ * @param {string} _product_name  product name
+ * @recorder
+ * @path=/products
+ */
+async function the_user_context_clicks_on_add_to_cart_button_in_the_context_of_product_name(_product_name) {
+  // source: recorder
+  // implemented_at: 2025-05-07T11:32:34.675Z
+  const _params = { _product_name };
+  //  Click on button_add_to_cart_1 in the context of <product_name>
+  await context.web.click(elements["button_add_to_cart_1"], _params, { context: _product_name }, this);
+}
+
+Then(
+  "The user context clicks on Add to cart button in the context of {string}",
+  { timeout: 60000 },
+  the_user_context_clicks_on_add_to_cart_button_in_the_context_of_product_name
 );
