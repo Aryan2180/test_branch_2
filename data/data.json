@@ -1,0 +1,38 @@
+{
+  "*": [
+    {
+      "key": "temp_1_data",
+      "value": "U2FsdGVkX1+K0oc/DiulO8M3Zz5cW5kjI+l5cB4kAF4=",
+      "DataType": "secret"
+    },
+    {
+      "key": "password",
+      "value": "U2FsdGVkX191xa9xafxoao688SBGyNqa5k2jTbIyMMc=",
+      "DataType": "secret"
+    },
+    {
+      "key": "AES_KEY",
+      "value": "56",
+      "DataType": "string"
+    }
+  ],
+  "login-salesforce": [
+    {
+      "key": "toooop",
+      "value": "U2FsdGVkX185RugZc/ujn3tDd7TcUs9MSLf6V/F3yAuo8TFBK8+it1kHPuuolKpuNo6Egj+MCC2rg2D3KbhWwA==",
+      "DataType": "totp"
+    },
+    {
+      "key": "username",
+      "value": "dev@blinq.io",
+      "DataType": "string"
+    }
+  ],
+  "shop-blinq": [
+    {
+      "key": "username",
+      "value": "blinq_user",
+      "DataType": "string"
+    }
+  ]
+}
