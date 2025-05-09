@@ -61,6 +61,35 @@ const elements = {
     ],
     element_name: "Login button",
   },
+  textbox_username_2: {
+    locators: [
+      { css: 'internal:label="Username *"i', priority: 1 },
+      { css: 'internal:label="Username *"s', priority: 1 },
+      { css: 'internal:role=textbox[name="Username"i]', priority: 1 },
+      { css: 'internal:role=textbox[name="Username"s]', priority: 1 },
+    ],
+    element_name: "Username textbox",
+  },
+  textbox_password_2: {
+    locators: [
+      { css: 'internal:label="Password *"i', priority: 1 },
+      { css: 'internal:label="Password *"s', priority: 1 },
+      { css: 'internal:role=textbox[name="Password"i]', priority: 1 },
+      { css: 'internal:role=textbox[name="Password"s]', priority: 1 },
+    ],
+    element_name: "Password textbox",
+  },
+  button_login_2: {
+    locators: [
+      { css: 'internal:role=button[name="Login"i]', priority: 1 },
+      { css: 'internal:role=button[name="Login"s]', priority: 1 },
+      { css: 'internal:text="Login"i', priority: 1 },
+      { css: 'internal:text="Login"s', priority: 1 },
+      { css: 'button >> internal:has-text="Login"i', priority: 1 },
+      { css: "button >> internal:has-text=/^Login$/", priority: 1 },
+    ],
+    element_name: "Login button",
+  },
 };
 
 let context = null;
@@ -121,4 +150,29 @@ Given(
   "The user logs in with username {string} and password {string}",
   { timeout: 300000 },
   the_user_logs_in_with_username_username_and_password_password
+);
+
+/**
+ * The user logs in with username "<username>" and password "<password>" 2
+ * @param {string} _username  username
+ * @param {string} _password  password
+ * @recorder
+ * @path=/login
+ */
+async function the_user_logs_in_with_username_username_and_password_password_2(_username, _password) {
+  // source: recorder
+  // implemented_at: 2025-05-09T07:05:43.492Z
+  const _params = { _username, _password };
+  // Fill Username textbox with "_username"
+  await context.web.clickType(elements["textbox_username_2"], _username, false, _params, null, this);
+  // Fill Password textbox with "_password"
+  await context.web.clickType(elements["textbox_password_2"], _password, false, _params, null, this);
+  // Click on Login button
+  await context.web.click(elements["button_login_2"], _params, null, this);
+}
+
+Given(
+  "The user logs in with username {string} and password {string} 2",
+  { timeout: 180000 },
+  the_user_logs_in_with_username_username_and_password_password_2
 );

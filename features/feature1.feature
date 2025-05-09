@@ -14,3 +14,10 @@ Feature: feature3
     Examples:
       | username   | password  | product_name                    |
       | blinq_user | let_me_in | KeyX 3000 - Mechanical Keyboard |
+	
+Scenario Outline: scene45
+	# fill Username with <username>, fill Password with <password>, click on Login
+	Given The user logs in with username "<username>" and password "<password>" 2
+		Examples:
+		| username | password |
+		| grdtf    | 875645   |
