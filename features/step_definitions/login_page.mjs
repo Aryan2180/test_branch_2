@@ -90,6 +90,22 @@ const elements = {
     ],
     element_name: "Login button",
   },
+  text_username: {
+    locators: [
+      { css: 'internal:text="Username *"i >> xpath=..', priority: 1 },
+      { css: 'internal:text="Username *"s >> xpath=..', priority: 1 },
+    ],
+    element_name: "Username Text",
+  },
+  textbox_username_3: {
+    locators: [
+      { css: 'internal:label="Username *"i', priority: 1 },
+      { css: 'internal:label="Username *"s', priority: 1 },
+      { css: 'internal:role=textbox[name="Username"i]', priority: 1 },
+      { css: 'internal:role=textbox[name="Username"s]', priority: 1 },
+    ],
+    element_name: "Username textbox",
+  },
 };
 
 let context = null;
@@ -175,4 +191,25 @@ Given(
   "The user logs in with username {string} and password {string} 2",
   { timeout: 180000 },
   the_user_logs_in_with_username_username_and_password_password_2
+);
+
+/**
+ * The user clicks on the Username textbox and then on another Username textbox on the login page
+ * @recorder
+ * @path=/login
+ */
+async function the_user_clicks_on_the_username_textbox_and_then_on_another_username_textbox_on_the_login_page() {
+  // source: recorder
+  // implemented_at: 2025-05-09T07:13:32.288Z
+  const _params = {};
+  // Click on Username Text
+  await context.web.click(elements["text_username"], _params, null, this);
+  // Click on Username textbox
+  await context.web.click(elements["textbox_username_3"], _params, null, this);
+}
+
+Given(
+  "The user clicks on the Username textbox and then on another Username textbox on the login page",
+  { timeout: 120000 },
+  the_user_clicks_on_the_username_textbox_and_then_on_another_username_textbox_on_the_login_page
 );

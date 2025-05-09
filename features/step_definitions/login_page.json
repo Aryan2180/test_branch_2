@@ -208,5 +208,66 @@
     "ignore_digit": [],
     "context": [],
     "strategy": "basic"
+  },
+  "text_username": {
+    "basic": [
+      {
+        "score": 191,
+        "css": "internal:text=\"Username *\"i >> xpath=..",
+        "priority": 1
+      },
+      {
+        "score": 196,
+        "css": "internal:text=\"Username *\"s >> xpath=..",
+        "priority": 1
+      }
+    ],
+    "no_text": [
+      {
+        "css": "form > div.MuiFormControl-root.MuiFormControl-marginNormal.MuiFormControl-fullWidth.MuiTextField-root:nth-child(1)",
+        "priority": 3
+      },
+      {
+        "css": "form > div.MuiFormControl-root.MuiFormControl-marginNormal.MuiFormControl-fullWidth.MuiTextField-root:nth-child(1)"
+      },
+      {
+        "css": ":root > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) > :nth-child(1)"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
+  },
+  "textbox_username_3": {
+    "basic": [
+      {
+        "score": 121,
+        "css": "internal:label=\"Username *\"i",
+        "priority": 1
+      },
+      {
+        "score": 126,
+        "css": "internal:label=\"Username *\"s",
+        "priority": 1
+      },
+      {
+        "score": 142,
+        "css": "internal:role=textbox[name=\"Username\"i]",
+        "priority": 1
+      },
+      {
+        "score": 147,
+        "css": "internal:role=textbox[name=\"Username\"s]",
+        "priority": 1
+      }
+    ],
+    "no_text": [
+      {
+        "css": "#username"
+      }
+    ],
+    "ignore_digit": [],
+    "context": [],
+    "strategy": "basic"
   }
 }
