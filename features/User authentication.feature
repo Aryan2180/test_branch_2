@@ -6,3 +6,11 @@ Scenario Outline: Login with username and password
 		Examples:
 		| username | password |
 		| hello    | world    |
+
+	
+Scenario Outline: User login with credentials
+	# fill Username with <username>, fill Password with <password>
+	Given The user logs in with username "<username>" and password "<password>" 4
+		Examples:
+		| username     | password  |
+		| {{username}} | let_me_in |

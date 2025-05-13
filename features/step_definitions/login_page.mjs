@@ -135,6 +135,24 @@ const elements = {
     ],
     element_name: "Password textbox",
   },
+  textbox_username_5: {
+    locators: [
+      { css: 'internal:label="Username *"i', priority: 1 },
+      { css: 'internal:label="Username *"s', priority: 1 },
+      { css: 'internal:role=textbox[name="Username"i]', priority: 1 },
+      { css: 'internal:role=textbox[name="Username"s]', priority: 1 },
+    ],
+    element_name: "Username textbox",
+  },
+  textbox_password_4: {
+    locators: [
+      { css: 'internal:label="Password *"i', priority: 1 },
+      { css: 'internal:label="Password *"s', priority: 1 },
+      { css: 'internal:role=textbox[name="Password"i]', priority: 1 },
+      { css: 'internal:role=textbox[name="Password"s]', priority: 1 },
+    ],
+    element_name: "Password textbox",
+  },
 };
 
 let context = null;
@@ -268,4 +286,31 @@ Given(
   "The user logs in with username {string} and password {string} 3",
   { timeout: 240000 },
   the_user_logs_in_with_username_username_and_password_password_3
+);
+
+/**
+ * The user logs in with username "<username>" and password "<password>" 4
+ * @param {string} _username  username
+ * @param {string} _password  password
+ * @recorder
+ * @path=/login
+ */
+async function the_user_logs_in_with_username_username_and_password_password_4(_username, _password) {
+  // source: recorder
+  // implemented_at: 2025-05-13T13:55:26.362Z
+  const _params = { _username, _password };
+  // Fill Username textbox with "_username"
+  await context.web.clickType(elements["textbox_username_5"], _username, false, _params, null, this);
+  // Press Tab
+  await context.web.clickType(elements["textbox_username_5"], "Tab", null, _params, { press: true }, this);
+  // Fill Password textbox with "_password"
+  await context.web.clickType(elements["textbox_password_4"], _password, false, _params, null, this);
+  // Press Enter
+  await context.web.clickType(elements["textbox_password_4"], "Enter", null, _params, { press: true }, this);
+}
+
+Given(
+  "The user logs in with username {string} and password {string} 4",
+  { timeout: 240000 },
+  the_user_logs_in_with_username_username_and_password_password_4
 );
