@@ -9,7 +9,7 @@ Feature: feature3
 	# fill Username with <username>, fill Password with <password>
     Given The user logs in with username "<username>" and password "<password>"
 	# click on Add to cart in the context of <product_name>
-    Then The user context clicks on Add to cart button in the context of "<product_name>"
+    Then The user context clicks on Add to cart button in the context of "<product_name>" 1
 
     Examples:
       | username   | password  | product_name                    |
